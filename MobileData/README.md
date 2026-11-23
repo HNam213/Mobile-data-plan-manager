@@ -1,3 +1,5 @@
+#Studen name: Trần Hoài Nam
+
 # MobileData – Android + ASP.NET Core + SQL Server
 
 Dự án đồ án: ứng dụng Android Java/XML quản lý gói cước dữ liệu. Ứng dụng sử dụng ASP.NET Core Minimal API (.NET 10) và SQL Server qua `Microsoft.Data.SqlClient` (ADO.NET). Có USER/ADMIN, OTP **mô phỏng**, đăng ký/hủy gói, số dư nạp tiền **mô phỏng**, quản lý khách hàng, báo cáo thống kê và hộp thư hỗ trợ qua SSE khi ứng dụng đang hoạt động.
