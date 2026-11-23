@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="22dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập mã gồm 6 chữ số để đăng nhập (hiệu lực 2 phút)."
+        android:textColor="#15335C"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtApiDevOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textStyle="bold"
+        android:textColor="#2463EB"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edtApiOtp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:hint="Nhập mã OTP"
+        android:inputType="number"
+        android:maxLength="6"
+        android:singleLine="true"
+        android:textColor="#15335C"
+        android:textColorHint="#64748B"
+        android:textStyle="bold"
+        android:textSize="22sp" />
+
+    <ProgressBar
+        android:id="@+id/progressApiOtp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnApiResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:text="Gửi lại OTP"
+        android:textColor="#2463EB"
+        android:textAllCaps="false" />
+</LinearLayout>

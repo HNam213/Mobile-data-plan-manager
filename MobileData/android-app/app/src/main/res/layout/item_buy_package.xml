@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_home_card"
+    android:gravity="center_vertical"
+    android:minHeight="116dp"
+    android:orientation="horizontal"
+    android:padding="9dp">
+
+    <!-- Khung màu xanh biểu diễn gói cước -->
+    <LinearLayout
+        android:layout_width="92dp"
+        android:layout_height="96dp"
+        android:background="@drawable/bg_home_plan"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtPosterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="DT30"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtPosterData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="7GB/7 ngày"
+            android:textColor="#E6F1FF"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- Thông tin chi tiết của gói -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPackageBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_chip"
+            android:paddingHorizontal="7dp"
+            android:paddingVertical="3dp"
+            android:text="Rẻ nhất"
+            android:textColor="#2463EB"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/txtPackageName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="DT30"
+            android:textColor="#15335C"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtPackageData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="7GB/7 ngày • 7 ngày"
+            android:textColor="#8192AD"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/txtPackagePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="30.000đ"
+            android:textColor="#2463EB"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="›"
+        android:textColor="#9BAAC0"
+        android:textSize="24sp"/>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/txtStatBarPeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="T1"
+        android:textColor="#15335C"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:text="Nạp"
+            android:textColor="#8192AD"
+            android:textSize="11sp" />
+
+        <ProgressBar
+            android:id="@+id/progressStatTopup"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="9dp"
+            android:layout_weight="1"
+            android:max="1000"
+            android:progress="0"
+            android:progressBackgroundTint="#E8EEF7"
+            android:progressTint="#2463EB" />
+
+        <TextView
+            android:id="@+id/txtStatBarTopup"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="0đ"
+            android:textColor="#15335C"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:text="Mua"
+            android:textColor="#8192AD"
+            android:textSize="11sp" />
+
+        <ProgressBar
+            android:id="@+id/progressStatSpent"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="9dp"
+            android:layout_weight="1"
+            android:max="1000"
+            android:progress="0"
+            android:progressBackgroundTint="#E8EEF7"
+            android:progressTint="#F2A34E" />
+
+        <TextView
+            android:id="@+id/txtStatBarSpent"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="0đ"
+            android:textColor="#15335C"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

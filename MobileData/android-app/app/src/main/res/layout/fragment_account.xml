@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- PHẦN 1: ĐẦU TRANG -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_header"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản của tôi"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Quản lý thuê bao và số dư"
+                android:textSize="13sp"
+                android:textColor="#E0ECFF"/>
+
+            <!-- Thông tin đại diện người dùng -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_home_chip"
+                    android:gravity="center"
+                    android:text="MD"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2455B6"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtAccountName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Người dùng MobileData"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/txtAccountHeaderPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0917 443 781"
+                        android:textSize="14sp"
+                        android:textColor="#E0ECFF"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtAccountHeaderCarrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home_chip"
+                    android:padding="9dp"
+                    android:text="VinaPhone"
+                    android:textColor="#2455B6"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- PHẦN 2: SỐ DƯ TÀI KHOẢN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_home_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SỐ DƯ TÀI KHOẢN CHÍNH"
+                android:textColor="#8192AD"
+                android:textSize="12sp"/>
+
+            <!-- Số dư sẽ được Java cập nhật -->
+            <TextView
+                android:id="@+id/txtAccountBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="22.531đ"
+                android:textColor="#15335C"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Số dư dùng để đăng ký gói cước"
+                android:textColor="#8192AD"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btnAccountTopup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="+ Nạp tiền"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2463EB"/>
+        </LinearLayout>
+
+        <!-- PHẦN 3: THÔNG TIN THUÊ BAO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:text="Thông tin thuê bao"
+            android:textColor="#15335C"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại"
+                android:textColor="#8192AD"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtAccountPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0917 443 781"
+                android:textColor="#15335C"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="14dp"
+                android:background="#E8EEF7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhà mạng"
+                android:textColor="#8192AD"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/txtAccountCarrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="VinaPhone"
+                android:textColor="#15335C"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="14dp"
+                android:background="#E8EEF7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loại thuê bao"
+                android:textColor="#8192AD"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Trả trước"
+                android:textColor="#15335C"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- PHẦN 4: CÁC CHỨC NĂNG TÀI KHOẢN -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:text="Quản lý tài khoản"
+            android:textColor="#15335C"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Hồ sơ chủ thuê bao mở riêng, có chỉnh sửa và ảnh đại diện. -->
+            <TextView
+                android:id="@+id/rowAccountProfile"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="ⓘ   Xem hồ sơ chủ thuê bao                   ›"
+                android:textColor="#15335C"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true" />
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E8EEF7" />
+
+            <!-- Chuyển đến tab Gói đang dùng -->
+            <TextView
+                android:id="@+id/rowAccountPackages"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="▣   Gói cước của tôi                         ›"
+                android:textColor="#15335C"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8EEF7"/>
+
+            <!-- Chuyển đến tab Lịch sử -->
+            <TextView
+                android:id="@+id/rowAccountHistory"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="◷   Lịch sử giao dịch                           ›"
+                android:textColor="#15335C"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+
+            <!-- Phần thống kê hiển thị cho cả USER và ADMIN -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8EEF7"/>
+
+            <TextView
+                android:id="@+id/rowAccountStatistics"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="▥   Thống kê cá nhân                         ›"
+                android:textColor="#15335C"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8EEF7" />
+
+            <TextView
+                android:id="@+id/rowAccountChat"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="✦   Trợ lý AI MobileData                       ›"
+                android:textColor="#245BDE"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <View
+                android:id="@+id/dividerChat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8EEF7" />
+
+            <TextView
+                android:id="@+id/rowAccountSupport"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="✉   Hỗ trợ khách hàng                         ›"
+                android:textColor="#15335C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Đường phân cách chỉ hiện với tài khoản ADMIN -->
+            <View
+                android:id="@+id/dividerAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8EEF7"/>
+
+
+            <!-- Khu vực quản trị sẽ triển khai riêng -->
+            <TextView
+                android:id="@+id/rowAccountAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:text="⚙   Trang quản trị viên                      ›"
+                android:textColor="#15335C"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- PHẦN 5: ĐĂNG XUẤT -->
+        <Button
+            android:id="@+id/btnAccountLogout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="22dp"
+            android:text="Đăng xuất"
+            android:textAllCaps="false"
+            android:textColor="#D94848"
+            android:backgroundTint="#FDEBEC"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="MobileData • Dịch vụ thuê bao"
+            android:textColor="#9BAAC0"
+            android:textSize="11sp"/>
+    </LinearLayout>
+</ScrollView>

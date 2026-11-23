@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F3F6FB">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="#245BDE" android:padding="16dp">
+        <TextView android:id="@+id/chatTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="‹  Trợ lý AI MobileData"
+            android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="20sp"
+            android:clickable="true" android:focusable="true" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Hỗ trợ tự động · Thông tin và giao dịch mô phỏng"
+            android:layout_marginTop="4dp" android:textColor="#E0ECFF" android:textSize="12sp" />
+    </LinearLayout>
+    <ScrollView android:id="@+id/chatScroll" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+        <LinearLayout android:id="@+id/chatMessages" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="14dp" android:paddingBottom="18dp"
+            android:orientation="vertical" />
+    </ScrollView>
+    <TextView android:id="@+id/chatTyping" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingHorizontal="18dp"
+        android:paddingVertical="7dp" android:text="Trợ lý đang xử lý câu hỏi…"
+        android:textColor="#245BDE" android:textSize="13sp" android:visibility="gone" />
+    <TextView android:id="@+id/chatStatus" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingHorizontal="16dp"
+        android:paddingVertical="5dp" android:text="AI có thể trả lời sai; hãy kiểm tra trước khi thao tác."
+        android:textColor="#63738A" android:textSize="11sp" />
+    <Button android:id="@+id/btnChatHandoff" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginHorizontal="12dp"
+        android:text="Cần hỗ trợ trực tiếp? Liên hệ quản trị viên" android:textAllCaps="false" android:textSize="12sp" android:minHeight="36dp" android:paddingVertical="0dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:gravity="bottom|center_vertical">
+        <EditText android:id="@+id/chatInput" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:minHeight="48dp" android:maxLines="4"
+            android:inputType="textCapSentences|textMultiLine" android:hint="Nhập câu hỏi..."
+            android:padding="10dp" android:textColor="#15335C" android:textColorHint="#8796AD" />
+        <Button android:id="@+id/btnChatSend" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Gửi" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

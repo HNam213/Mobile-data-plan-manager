@@ -1,0 +1,39 @@
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+.cxx/
+.externalNativeBuild/
+/captures/
+*.apk
+*.aab
+*.ap_
+
+# Native / OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Secrets and local-only overrides
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+appsettings.Local.json
+*.pfx
+*.key
+*.keystore
+*.jks
+
+# Local database dumps and backups
+*.bak
+*.bacpac
+*.mdf
+*.ldf
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*_backup/

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Nền xanh gradient từ trái sang phải -->
+    <gradient
+        android:angle="0"
+        android:startColor="#2455B6"
+        android:endColor="#4E9BF5" />
+
+    <corners
+        android:bottomLeftRadius="26dp"
+        android:bottomRightRadius="26dp" />
+
+</shape>

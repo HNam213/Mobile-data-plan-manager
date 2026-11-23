@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F9FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MobileData"
+            android:textColor="#2463EB"
+            android:textStyle="bold"
+            android:textSize="31sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Đăng nhập bằng số điện thoại và mã OTP"
+            android:textColor="#64748B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Số điện thoại"
+            android:textStyle="bold"
+            android:textColor="#15335C" />
+
+        <EditText
+            android:id="@+id/edtApiLoginPhone"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:hint="Ví dụ: 0917443781"
+            android:inputType="number"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:padding="12dp"
+            android:backgroundTint="#2463EB"
+            android:textColor="#15335C"
+            android:textColorHint="#64748B"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Nhà mạng"
+            android:textStyle="bold"
+            android:textColor="#15335C" />
+
+        <Spinner
+            android:id="@+id/spApiLoginCarrier"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnApiRequestOtp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="30dp"
+            android:text="Gửi mã OTP"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#2463EB"
+            android:textColor="#FFFFFF" />
+
+        <ProgressBar
+            android:id="@+id/progressApiLogin"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Mã OTP sẽ hiển thị tại bước xác thực, không gửi qua tin nhắn SMS."
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

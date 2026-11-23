@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MobileData" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <!-- Hộp thoại sáng dùng chung cho toàn bộ MobileData -->
+    <style
+        name="MobileDataLightDialog"
+        parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">#245BDE</item>
+
+        <!-- Mau chu cho cac nut cua AlertDialog, tranh chu trang tren nen trang khi dung LDPlayer -->
+        <item name="buttonBarPositiveButtonStyle">@style/MobileDataDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MobileDataDialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/MobileDataDialogButton</item>
+        <item name="android:textColorPrimary">#15335C</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+
+        <!-- Nền trắng, góc bo tròn -->
+        <item name="android:windowBackground">
+            @drawable/bg_mobiledata_dialog
+        </item>
+    </style>
+
+</resources>

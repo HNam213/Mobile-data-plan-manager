@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_header"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gói cước của tôi"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Theo dõi gói đang còn hiệu lực"
+                android:textColor="#E0ECFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Thẻ này được ẩn ngay khi hết hạn hoặc khi người dùng hủy. -->
+        <LinearLayout
+            android:id="@+id/cardMyActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/txtMyPackageCode"
+                    android:text="Gói cước"
+                    android:textColor="#15335C"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtMyPackageStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_package_active"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:text="Đang sử dụng"
+                    android:textColor="#13976E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:id="@+id/txtMyPackageSummary"
+                android:text="Thông tin gói"
+                android:textColor="#8192AD"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMyPackageStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ngày đăng ký"
+                android:textColor="#15335C"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMyPackageEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ngày hết hạn"
+                android:textColor="#15335C"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMyPackageRemaining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Thời gian còn lại"
+                android:textColor="#2463EB"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressMyPackage"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="12dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#2463EB" />
+
+            <TextView
+                android:id="@+id/txtMyPackageProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Đã sử dụng 0% thời hạn"
+                android:textColor="#8192AD"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtMyPackageMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_home_chip"
+                android:padding="12dp"
+                android:text="Gói còn hiệu lực"
+                android:textColor="#587BB4"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnMyPackageDetail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#2463EB"
+                android:text="Xem chi tiết gói"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnMyPackageCancel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FDEBEC"
+                android:text="Hủy gói đang dùng"
+                android:textAllCaps="false"
+                android:textColor="#D94848" />
+
+            <Button
+                android:id="@+id/btnMyPackageBuy"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#EAF2FF"
+                android:text="Xem gói cước khác"
+                android:textAllCaps="false"
+                android:textColor="#245BDE" />
+        </LinearLayout>
+
+        <!-- Trạng thái trống thay thế toàn bộ danh sách đã hết hạn/hủy. -->
+        <LinearLayout
+            android:id="@+id/emptyMyPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_home_card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Chưa có gói cước đang sử dụng"
+                android:textColor="#15335C"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Gói đã hết hạn hoặc được hủy sẽ không tự đăng ký lại. Bạn có thể chọn gói mới khi cần."
+                android:textColor="#8192AD"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnMyEmptyBuy"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#2463EB"
+                android:text="Xem danh sách gói"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <!-- Chỉ hiện khi tìm được gói đã đăng ký thành công trong lịch sử. -->
+            <Button
+                android:id="@+id/btnMyRenewLast"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#E8F0FF"
+                android:text="Đăng ký lại gói gần nhất"
+                android:textAllCaps="false"
+                android:textColor="#245BDE"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Cai dat nhac thuc te va xem lich su thong bao tren thiet bi. -->
+        <LinearLayout
+            android:id="@+id/panelReminderCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trung tâm nhắc nhở"
+                android:textColor="#15335C"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Chọn mốc nhắc hạn, xem lịch sử thông báo đã gửi trên điện thoại. Cảnh báo dung lượng cần dữ liệu sử dụng thực tế từ API."
+                android:textColor="#51647C"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnReminderSettings"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#EAF2FF"
+                android:text="Tùy chỉnh mốc nhắc"
+                android:textAllCaps="false"
+                android:textColor="#245BDE"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnReminderHistory"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#EAF2FF"
+                android:text="Xem lịch sử thông báo"
+                android:textAllCaps="false"
+                android:textColor="#245BDE"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Chi hien khi chay ban debug. Khong thay doi lich nhac that. -->
+        <LinearLayout
+            android:id="@+id/panelMyPackageExpiryDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trình diễn nhắc hết hạn (Debug)"
+                android:textColor="#15335C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Chọn tình huống còn 1 giờ, 5 phút, hết hạn hoặc sắp hết dung lượng (mô phỏng). Không đổi thời hạn hay lịch nhắc thật."
+                android:textColor="#506681"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnDemoPackageExpiry"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#2463EB"
+                android:text="Chọn thông báo Demo"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnEditDemoMessage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="9dp"
+                android:backgroundTint="#EAF2FF"
+                android:text="Sửa nội dung Demo 1 giờ"
+                android:textAllCaps="false"
+                android:textColor="#245BDE"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

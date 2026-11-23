@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHI TIẾT GÓI CƯỚC"
+            android:textColor="#2463EB"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtDetailPlanName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="BIG120"
+            android:textColor="#15335C"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Thông tin gói cước di động"
+            android:textColor="#8192AD"
+            android:textSize="13sp"/>
+
+        <!-- Giá gói cước -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_home_chip"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GIÁ GÓI CƯỚC"
+                android:textColor="#587BB4"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/txtDetailPlanPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="120.000đ"
+                android:textColor="#245BDE"
+                android:textSize="27sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Dung lượng -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Dung lượng Internet"
+            android:textColor="#8192AD"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/txtDetailPlanData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2GB/ngày"
+            android:textColor="#15335C"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#E8EEF7"/>
+
+        <!-- Chu kỳ gói -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Chu kỳ sử dụng"
+            android:textColor="#8192AD"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/txtDetailPlanDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="30 ngày"
+            android:textColor="#15335C"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <!-- Thông báo cho bản mô phỏng -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_home_chip"
+            android:padding="12dp"
+            android:text="Gói cước đang dùng dữ liệu mô phỏng. Ứng dụng chưa thực hiện đăng ký với nhà mạng thật."
+            android:textColor="#587BB4"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</ScrollView>

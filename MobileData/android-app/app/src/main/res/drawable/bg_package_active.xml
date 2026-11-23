@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nền xanh lá cho gói còn hiệu lực -->
+    <solid android:color="#E5F7EE"/>
+    <corners android:radius="14dp"/>
+</shape>
